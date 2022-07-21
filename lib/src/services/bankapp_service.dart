@@ -36,7 +36,6 @@ class BankService {
   Future<Response> getMovements() async {
     try {
       Response response = await dio.get('movimientos');
-      print(response.data);
       return response;
     } on DioError catch (e) {
       return e.response!;

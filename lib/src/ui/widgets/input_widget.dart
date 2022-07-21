@@ -3,7 +3,9 @@ import 'package:flutter/services.dart';
 
 class InputWidget extends StatefulWidget {
   final List<TextInputFormatter>? textInputFormatter;
+
   final int? maxLength;
+  final String? Function(String?)? validator;
   final TextEditingController? controller;
   final String text;
   final TextCapitalization textCapitalization;
@@ -14,6 +16,7 @@ class InputWidget extends StatefulWidget {
       {Key? key,
       this.textInputFormatter,
       this.maxLength,
+      this.validator,
       required this.controller,
       required this.text,
       required this.textCapitalization,
@@ -33,9 +36,10 @@ class _InputWidgetState extends State<InputWidget> {
     return Center(
         child: SizedBox(
             width: size.width * widget.valueSize,
-            child: TextField(
+            child: TextFormField(
                 cursorColor: const Color(0xff00b689),
                 controller: widget.controller,
+                validator: widget.validator,
                 textCapitalization: widget.textCapitalization,
                 keyboardType: widget.keyboardType,
                 textInputAction: TextInputAction.next,
@@ -47,9 +51,17 @@ class _InputWidgetState extends State<InputWidget> {
                     contentPadding: EdgeInsets.all(size.width * .02),
                     hintText: widget.text,
                     isDense: true,
-                    hoverColor: Color(0xff00b689),
+                    errorStyle: const TextStyle(
+                        color: Colors.red, fontSize: 0, height: 0),
+                    hoverColor: const Color(0xff00b689),
                     focusColor: const Color(0xff00b689),
                     counterStyle: const TextStyle(fontSize: 0),
+                    focusedErrorBorder: const OutlineInputBorder(
+                        borderSide:
+                            BorderSide(width: 1, color: Colors.redAccent)),
+                    errorBorder: const OutlineInputBorder(
+                        borderSide:
+                            BorderSide(width: 1, color: Colors.redAccent)),
                     focusedBorder: const OutlineInputBorder(
                         borderSide:
                             BorderSide(width: 1, color: Color(0xff00b689))),

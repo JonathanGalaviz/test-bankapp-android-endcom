@@ -8,7 +8,7 @@ class ButtonWidget {
       required BuildContext context}) {
     Size size = MediaQuery.of(context).size;
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onTap,
       style: ElevatedButton.styleFrom(
           primary: color,
           padding: EdgeInsets.symmetric(
