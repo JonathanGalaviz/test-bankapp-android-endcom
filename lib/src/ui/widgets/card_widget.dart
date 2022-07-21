@@ -17,7 +17,7 @@ class CardWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
-                          width: size.width * .4,
+                          width: size.width * .3,
                           child: Text(title,
                               style: TextStyle(
                                   color: const Color(0xff0088b2),

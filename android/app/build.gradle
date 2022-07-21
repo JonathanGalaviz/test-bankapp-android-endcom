@@ -51,6 +51,9 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        ndk {
+            ndk { abiFilters 'armeabi-v7a'}
+        }
     }
 
     buildTypes {
@@ -58,6 +61,9 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
+            ndk {
+                ndk { abiFilters 'armeabi-v7a'}
+            }
         }
     }
 }

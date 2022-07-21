@@ -58,10 +58,10 @@ class _InputWidgetState extends State<InputWidget> {
                     counterStyle: const TextStyle(fontSize: 0),
                     focusedErrorBorder: const OutlineInputBorder(
                         borderSide:
-                            BorderSide(width: 1, color: Colors.redAccent)),
+                            BorderSide(width: 1.2, color: Colors.redAccent)),
                     errorBorder: const OutlineInputBorder(
                         borderSide:
-                            BorderSide(width: 1, color: Colors.redAccent)),
+                            BorderSide(width: 1.2, color: Colors.redAccent)),
                     focusedBorder: const OutlineInputBorder(
                         borderSide:
                             BorderSide(width: 1, color: Color(0xff00b689))),
