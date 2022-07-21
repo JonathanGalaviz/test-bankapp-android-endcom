@@ -1,10 +1,7 @@
 # Test
 
-A new Flutter project.
+## Iniciar el proyecto
 
-## Starting with the project
-
-To start using this project is very simple, you just have to clone and install the dependencies with this commands:
 Para comenzar a utlizar el proyecto es necesario instalar las dependencias necesarias.
 
 #### Android
@@ -13,7 +10,7 @@ Abrir el proeycto dirigirse al archivo pubspec.yaml y hacer click en la opción 
 Para correr la aplicación puede ser desde Android Studio o en la terminal dirigirse a la carpeta del proyecto y escribir el comando flutter run.
 ```
 
-### Prerequisites
+### Prerequisitos
 
 El presente proyecto fue desarrollado utilizando Flutter 3.0.0 y Dart 2.17.0
 
