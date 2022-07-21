@@ -42,18 +42,20 @@ class _InputWidgetState extends State<InputWidget> {
                 inputFormatters: widget.textInputFormatter,
                 maxLength: widget.maxLength,
                 decoration: InputDecoration(
-                  hintText: widget.text,
-                  isDense: true,
-                  hoverColor: Color(0xff00b689),
-                  focusColor: const Color(0xff00b689),
-                  counterStyle: const TextStyle(fontSize: 0),
-                  focusedBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(width: 1, color: Color(0xff00b689)),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                        width: 1, color: Colors.black.withOpacity(0.6)),
-                  ),
-                ))));
+                    filled: true,
+                    fillColor: Colors.white,
+                    contentPadding: EdgeInsets.all(size.width * .02),
+                    hintText: widget.text,
+                    isDense: true,
+                    hoverColor: Color(0xff00b689),
+                    focusColor: const Color(0xff00b689),
+                    counterStyle: const TextStyle(fontSize: 0),
+                    focusedBorder: const OutlineInputBorder(
+                        borderSide:
+                            BorderSide(width: 1, color: Color(0xff00b689))),
+                    enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                            width: 1,
+                            color: Colors.black.withOpacity(0.6)))))));
   }
 }
