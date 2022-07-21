@@ -42,6 +42,7 @@ class CardWidget {
       required String nameCard,
       required String numberCard,
       required String money,
+      required String type,
       required BuildContext context}) {
     Size size = MediaQuery.of(context).size;
     return Padding(
@@ -50,7 +51,11 @@ class CardWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Icon(icon, size: size.width * .1),
+              Icon(icon,
+                  size: size.width * .1,
+                  color: status == 'activa'
+                      ? const Color(0xff00b689)
+                      : const Color(0xff57BBA2).withOpacity(.6)),
               SizedBox(
                   width: size.width * .6,
                   child: Padding(
@@ -81,7 +86,7 @@ class CardWidget {
                                     style: TextStyle(
                                         fontSize: size.width * .035,
                                         fontWeight: FontWeight.w500))),
-                            Text('Titular',
+                            Text(type,
                                 style: TextStyle(
                                     fontSize: size.width * .03,
                                     fontWeight: FontWeight.w500))
@@ -99,6 +104,7 @@ class CardWidget {
       {required String title,
       required String subtitle,
       required String money,
+      required String type,
       required BuildContext context}) {
     Size size = MediaQuery.of(context).size;
     return SizedBox(
@@ -117,7 +123,9 @@ class CardWidget {
                     fontSize: size.width * .028, fontWeight: FontWeight.w600)),
             trailing: Text('\$$money',
                 style: TextStyle(
-                    fontSize: size.width * .028, fontWeight: FontWeight.w600)),
+                    fontSize: size.width * .028,
+                    color: type == 'abono' ? Colors.green : Colors.redAccent,
+                    fontWeight: FontWeight.w600)),
           ),
           SizedBox(
               width: size.width * .85,

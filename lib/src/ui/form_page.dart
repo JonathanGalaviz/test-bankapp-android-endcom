@@ -102,7 +102,7 @@ class _FormPageState extends State<FormPage> {
                         valueSize: .4,
                         text: 'Estatus'),
                     InputWidget(
-                        controller: issureController,
+                        controller: balanceController,
                         textCapitalization: TextCapitalization.none,
                         keyboardType: TextInputType.number,
                         textInputAction: TextInputAction.next,
